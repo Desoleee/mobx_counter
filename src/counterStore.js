@@ -6,13 +6,13 @@ export default class counterStore {
   constructor() {
     makeObservable(this, {
       count: observable,
-      isNevative: computed,
+      isNegative: computed,
       increase: action,
       decrease: action
     });
   }
 
-  get isNevative() {
+  get isNegative() {
     return this.count < 0 ? 'Yes' : 'No';
   }
 
